@@ -10,11 +10,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
+
 
 import net.ims.entity.BookMGHT;
-
-import net.ims.service.BookMGHTService;
 import net.ims.service.BookMGHTServiceImpldao;
 
 
@@ -34,7 +32,7 @@ public class BookController {
 	
 	@GetMapping("/addBook")
 	
-	public String getBookMGHTList()
+	public String getBookMGHT()
 	{
 		
 		return"BookMGHT.html";
@@ -50,7 +48,7 @@ public class BookController {
 	   }
 	
 
-       @GetMapping("/getBookMGHTList")
+     @GetMapping("/getBookMGHTList")
         public String getAllBookMGHTList(Model model) {
            List<BookMGHT> list = service.getAllBook();
              model.addAttribute("pol", list);
