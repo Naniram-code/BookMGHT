@@ -68,6 +68,4 @@ public class BookMGHTServiceImpldao implements BookMGHTServiceDAO {
 	        throw new RecordNotFoundException("Book Not Found");
 
 
-
-
 }}
